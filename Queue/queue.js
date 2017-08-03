@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 16:31:54
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-03 17:07:25
+ * @Last Modified time: 2017-08-03 17:12:25
  */
 function Queue() {
     this.items = []
@@ -19,7 +19,7 @@ Queue.prototype = {
     front: function() {
         return this.items[0]
     },
-    isEmpty: ()=> {
+    isEmpty: function() {
         return this.items.length === 0
     },
     clear: function() {
@@ -37,7 +37,7 @@ Queue.prototype = {
 
 let s = new Queue()
 
-s.equeue(1)
+s.equeue(3)
 s.equeue(2)
 
 s.print()
