@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 17:38:44
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-03 18:46:55
+ * @Last Modified time: 2017-08-03 21:40:49
  */
 
 function LinkedList() {
@@ -96,7 +96,7 @@ function LinkedList() {
             count++
         }
         return count === 0
-            ? 'item is not found'
+            ? -1
             : count
     }
 
