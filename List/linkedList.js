@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 17:38:44
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-03 21:40:49
+ * @Last Modified time: 2017-08-03 21:42:42
  */
 
 function LinkedList() {
@@ -13,6 +13,10 @@ function LinkedList() {
 
     let length = 0
     let head = null
+
+    this.getHead = function () {
+        return head
+    }
 
     this.append = function (item) {
         let node = new Node(item)
