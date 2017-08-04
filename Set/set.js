@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 22:29:03
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-04 10:00:02
+ * @Last Modified time: 2017-08-04 11:03:52
  */
 
 function Set() {
@@ -24,7 +24,7 @@ function Set() {
             delete items[value]
             return true
         }
-        return false
+        return false     
     }
 
     this.clear = function(){
