@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 23:41:19
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-14 15:26:26
+ * @Last Modified time: 2017-08-14 15:37:59
  */
 
 let quickSort = function (arrary, left, right) {
