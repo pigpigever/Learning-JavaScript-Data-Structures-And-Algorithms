@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 23:41:19
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-04 11:26:07
+ * @Last Modified time: 2017-08-14 15:26:26
  */
 
 let quickSort = function (arrary, left, right) {
@@ -32,7 +32,7 @@ let partition = function (array, left, right) {
         if (i <= j) {
             swapQuickSort(array, i, j)
             i++,
-            j++
+            j--
         }
     }
 }
