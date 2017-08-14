@@ -2,7 +2,7 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 23:41:19
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-14 15:41:14
+ * @Last Modified time: 2017-08-14 15:42:42
  */
 
 let quickSort = function (arrary, left, right) {
@@ -35,7 +35,7 @@ let partition = function (array, left, right) {
             j--
         }
     }
-    return i
+    return i;
 }
 
 let swapQuickSort = function (array, index1, index2) {
