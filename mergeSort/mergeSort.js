@@ -2,12 +2,8 @@
  * @Author: pigpigever
  * @Date: 2017-08-04 16:38:38
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-04 16:56:58
+ * @Last Modified time: 2017-08-16 17:14:16
  */
-
-function mergeSort(array) {
-    array = mergeSortRec(array)
-}
 
 function mergeSortRec(array) {
     let length = array.length;
@@ -15,8 +11,8 @@ function mergeSortRec(array) {
         return array
     }
     let mid = Math.floor(length / 2),
-        left = array.slice(0, mid)
-    right = array.slice(mid, length)
+        left = array.slice(0, mid),
+        right = array.slice(mid, length)
     return merge(mergeSortRec(left), mergeSortRec(right))
 }
 
@@ -26,7 +22,7 @@ function merge(left, right) {
         ir = 0
     while (il < left.length && ir < right.length) {
         if (left[il] < right[ir]) {
-            result.push(left[l++])
+            result.push(left[il++])
         } else {
             result.push(right[ir++])
         }

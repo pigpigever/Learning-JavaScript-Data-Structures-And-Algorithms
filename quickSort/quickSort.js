@@ -2,13 +2,13 @@
  * @Author: pigpigever
  * @Date: 2017-08-03 23:41:19
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-14 15:42:42
+ * @Last Modified time: 2017-08-14 16:40:27
  */
 
 let quickSort = function (arrary, left, right) {
     let index
     if (array.length > 1) {
-        index = partition(array, left, right)
+             ght)
         if ((left < index - 1)) {
             quickSort(array, left, index - 1)
         }
