@@ -2,13 +2,13 @@
  * @Author: pigpigever 
  * @Date: 2017-08-30 09:41:18 
  * @Last Modified by: pigpigever
- * @Last Modified time: 2017-08-30 11:33:49
+ * @Last Modified time: 2017-08-30 11:41:45
  */
 
 //JavaScript实现二叉树
 
 //定义类
-exports.BinarySearchTree = function() {
+function BinarySearchTree() {
 
     var Node = function (key) {
         this.key = key
