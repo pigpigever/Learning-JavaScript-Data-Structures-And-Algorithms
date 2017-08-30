@@ -8,7 +8,7 @@
 let quickSort = function (arrary, left, right) {
     let index
     if (array.length > 1) {
-             ght)
+        index = partition(array, left, right)
         if ((left < index - 1)) {
             quickSort(array, left, index - 1)
         }
