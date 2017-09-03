@@ -1,3 +1,7 @@
+# Learning-JavaScript-Data-Structures-And-Algorithms
+
+> 这个仓库主要存放我学习``数据结构与算法``的代码，核心代码全部由``JavaScript``实现
+
 ## 分类
 
 * 数据结构
@@ -23,3 +27,4 @@
 ...
 
 后续将逐渐完善这个仓库
+
