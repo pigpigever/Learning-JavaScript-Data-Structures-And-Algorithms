@@ -8,7 +8,7 @@
             "type": "node",
             "request": "launch",
             "name": "test",
-            "program": "C:/Users/Pigpigever/Desktop/repository/Learning-JavaScript-Data-Structures-and-Algorithms/Stack/stack.js"
+            "program": "C:/Users/Pigpigever/Desktop/repository/Learning-JavaScript-Data-Structures-and-Algorithms/原型继承构建二叉树/tree.js"
         }
     ]
 }
