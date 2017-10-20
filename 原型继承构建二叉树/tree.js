@@ -11,17 +11,17 @@ function BinaryTree() {
 
 BinaryTree.prototype = {
     constructor: Node,
-    insertData: function (data) {
+    insertNode: function (data) {
         var root = this.root
         if (this.root === null) {
             this.root = {}
             this.root.data = data
         } else {
             console.log('开始插入节点= =')
-            insertNode(this.root, data)
+            insertData(this.root, data)
         }
     },
-    travelData: function (root) {
+    travelNode: function (root) {
         (function travelTree(root) {
             if (root != null) {
                 console.log(root.data)
@@ -32,18 +32,18 @@ BinaryTree.prototype = {
     }
 }
 
-function insertNode(node, data) {
+function insertData(node, data) {
     if (data < node.data) {
         if (node.leftChild == null) {
             node.leftChild = { data }
         } else {
-            insertNode(node.leftChild, data)
+            insertData(node.leftChild, data)
         }
     } else {
         if (node.rightChild == null) {
             node.rightChild = { data }
         } else {
-            insertNode(node.rightChild, data)
+            insertData(node.rightChild, data)
         }
     }
 }
