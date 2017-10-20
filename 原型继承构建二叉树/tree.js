@@ -17,7 +17,6 @@ BinaryTree.prototype = {
             this.root = {}
             this.root.data = data
         } else {
-            console.log('开始插入节点= =')
             insertData(this.root, data)
         }
     },
