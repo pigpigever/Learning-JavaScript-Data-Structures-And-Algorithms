@@ -21,14 +21,12 @@ BinaryTree.prototype = {
             insertData(this.root, data)
         }
     },
-    travelNode: function (root) {
-        (function travelTree(root) {
-            if (root != null) {
-                console.log(root.data)
-                travelTree(root.leftChild)
-                travelTree(root.rightChild)
-            }
-        })(root)
+    travelTree: function (root) {
+        if (root != null) {
+            console.log(root.data)
+            this.travelTree(root.leftChild)
+            this.travelTree(root.rightChild)
+        }
     }
 }
 
@@ -51,10 +49,10 @@ function insertData(node, data) {
 
 var tree = new BinaryTree()
 
-tree.insertData(5)
-tree.insertData(10)
-tree.insertData(1)
-tree.insertData(3)
-tree.insertData(20)
-tree.insertData(8)
-tree.travelData(tree.root)
+tree.insertNode(5)
+tree.insertNode(10)
+tree.insertNode(1)
+tree.insertNode(3)
+tree.insertNode(20)
+tree.insertNode(8)
+tree.travelTree(tree.root)
