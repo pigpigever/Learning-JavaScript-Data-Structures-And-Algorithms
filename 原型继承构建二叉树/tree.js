@@ -1,57 +1,54 @@
-
-function Node() {
+function Node(){
     this.data = null
     this.leftChild = null
     this.rightChild = null
 }
 
-function BinaryTree() {
+function BinaryTree(){
+    Node.call(this)
     this.root = null
 }
 
-BinaryTree.prototype = {
-    constructor: Node,
-    insertNode: function (data) {
-        var root = this.root
-        if (this.root === null) {
-            this.root = {}
-            this.root.data = data
-        } else {
-            insertData(this.root, data)
-        }
-    },
-    travelTree: function (root) {
-        if (root != null) {
-            console.log(root.data)
-            this.travelTree(root.leftChild)
-            this.travelTree(root.rightChild)
-        }
+;(function () {
+    const F = function () {}
+    F.prototype = Node.prototype
+    BinaryTree.prototype = new F()
+    BinaryTree.prototype.constructor = BinaryTree
+})()
+
+BinaryTree.prototype.insertNode = function(data){
+    if(this.root === null){
+        this.root = {}
+        this.root.data = data
+    }else{
+        insertNode(this.root, data)
     }
 }
+BinaryTree.prototype.travelTree = function (root) { //前序遍历
+    console.log(root.data)
+    this.travelTree(root.leftChild)
+    this.travelTree(root.rightChild)
+}
 
-function insertData(node, data) {
-    if (data < node.data) {
-        if (node.leftChild == null) {
+//插入结点，这里构造的是一颗二叉搜索树
+function insertNode (node,data) {
+    if (node.data < data) {
+        if (node.leftChild === null) {
             node.leftChild = { data }
         } else {
-            insertData(node.leftChild, data)
+            insertNode(node.leftChild, data)
         }
-    } else {
-        if (node.rightChild == null) {
+    }else{
+        if (node.rightChild === null) {
             node.rightChild = { data }
         } else {
-            insertData(node.rightChild, data)
+            insertNode(node.rightChild, data)
         }
     }
 }
 
+let obj = new BinaryTree()
 
-var tree = new BinaryTree()
-
-tree.insertNode(5)
-tree.insertNode(10)
-tree.insertNode(1)
-tree.insertNode(3)
-tree.insertNode(20)
-tree.insertNode(8)
-tree.travelTree(tree.root)
+Object.keys(obj).forEach((item, index) => {
+    console.log(item, index)
+})
